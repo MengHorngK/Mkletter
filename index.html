@@ -383,8 +383,8 @@
 </div>
     </div>
 
-    <audio id="bgAudio" loop>
-        <source src="song1.MP3" type="audio/mpeg">
+    <audio id="bgAudio" loop preload="auto">
+      <source src="song.mp3" type="audio/mpeg">
     </audio>
 
     <script>
@@ -414,6 +414,9 @@
             document.getElementById('seal').style.opacity = '0';
 
             document.getElementById('bgAudio').play().catch(() => {});
+            const audio = document.getElementById('bgAudio');
+            audio.volume = 0.7;
+            audio.play().catch(e => console.log("Audio blocked:", e));
 
             setTimeout(() => {
                 document.getElementById('landing').style.display = 'none';
