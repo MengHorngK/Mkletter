@@ -383,9 +383,9 @@
 </div>
     </div>
 
-   <audio id="bgAudio" loop preload="auto">
-  <source src="song.mp3" type="audio/mpeg">
-  </audio>
+    <audio id="bgAudio" loop>
+        <source src="song1.MP3" type="audio/mpeg">
+    </audio>
 
     <script>
         // Generate floating hearts
@@ -412,9 +412,7 @@
             document.getElementById('flap').classList.add('open');
             document.getElementById('letterPeek').classList.add('open');
             document.getElementById('seal').style.opacity = '0';
-            const audio = document.getElementById('bgAudio');
-            audio.volume = 0.7;
-            audio.play().catch(e => console.log("Audio blocked:", e));
+
             document.getElementById('bgAudio').play().catch(() => {});
 
             setTimeout(() => {
@@ -496,4 +494,4 @@ function typeWriter() {
     </script>
 
 </body>
-</html>
+</html>r
